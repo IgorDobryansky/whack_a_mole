@@ -1,1 +1,44 @@
 @import "reset";
+
+#app {
+  fieldset {
+    border: 1px solid black;
+    border-radius: 15px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    input:not(:first-of-type) {
+      margin-left: 15px;
+    }
+    label {
+      margin-left: 5px;
+    }
+
+    button {
+      padding: 10px;
+      border: 1px solid white;
+      border-radius: 10px;
+      margin-left: 15px;
+      &:hover {
+        border: 1px solid black;
+      }
+    }
+  }
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 50px;
+  table {
+    tr {
+      td {
+        cursor: pointer;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        border: 1px solid black;
+      }
+    }
+  }
+}

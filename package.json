@@ -1,7 +1,7 @@
 {
-  "name": "advanced_js_homework_5",
+  "name": "advanced_js_homework_7",
   "version": "1.0.0",
-  "description": "Twitter clone",
+  "description": "Whack a mole",
   "main": "index.html",
   "type": "module",
   "scripts": {
