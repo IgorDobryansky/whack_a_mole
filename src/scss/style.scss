@@ -1,13 +1,21 @@
 @import "reset";
 
 #app {
+    h1{
+        font-size: 30px;
+        margin-bottom: 10px;
+    }
+  .statistic {
+    margin-bottom: 10px;
+    font-size: 20px;
+  }
   fieldset {
     border: 1px solid black;
     border-radius: 15px;
     padding: 20px;
     display: flex;
     align-items: center;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
     input:not(:first-of-type) {
       margin-left: 15px;
     }
@@ -29,15 +37,25 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  padding: 50px;
+  padding: 20px;
   table {
     tr {
       td {
+        position: relative;
         cursor: pointer;
         width: 60px;
         height: 60px;
         border-radius: 50%;
         border: 1px solid black;
+        overflow: hidden;
+        img {
+          position: absolute;
+          width: 100%;
+          border-radius: 50%;
+          top: 100%;
+          left: 0;
+          transition: 100ms ease-in-out;
+        }
       }
     }
   }

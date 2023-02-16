@@ -5,6 +5,8 @@ const startButton = document.querySelector(".start");
 const hardMode = document.getElementById("500");
 const normalMode = document.getElementById("1000");
 const easyMode = document.getElementById("1500");
+const playerOutput = document.querySelector(".player");
+const computerOutput = document.querySelector(".computer");
 
 const cells = [...document.querySelectorAll("td")];
 
@@ -42,12 +44,16 @@ function getRandomCell(cellActivationTimeout = difficultyMode) {
     if (+cell.getAttribute("data-number") === cellsNumber[randomCell]) {
       cell.addEventListener("click", playerGetPoint);
 
-      cell.style.background = "blue";
+      cell.firstChild.style.top = "0%";
+
+      // cell.style.background = "blue";
 
       timeout = setTimeout(() => {
+        cell.firstChild.style.top = "100%";
         cell.style.background = "red";
         cell.removeEventListener("click", playerGetPoint);
         computerPoint++;
+        computerOutput.innerText = `Количество очков у компьютера: ${computerPoint}`
         if (computerPoint === 10) {
           clearInterval(interval);
           return;
@@ -58,8 +64,10 @@ function getRandomCell(cellActivationTimeout = difficultyMode) {
       }, difficultyMode);
 
       function playerGetPoint() {
+        cell.firstChild.style.top = "100%";
         cell.style.background = "green";
         playerPoint++;
+        playerOutput.innerText = `Количество очков у игрока: ${playerPoint}`
         clearTimeout(timeout);
         cellsNumber = [...cellsNumber].filter(
           (cell, index) => index !== randomCell
