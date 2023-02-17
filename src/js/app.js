@@ -34,6 +34,7 @@ function startGame() {
     for (let j = 0; j < 10; j++) {
       const td = new Cell();
       td.createCell(tableRow);
+      // td.style.height = getComputedStyle(td).width + "px";
     }
     table.append(tableRow);
   }
@@ -96,6 +97,7 @@ function startGame() {
           playerOutput.innerText = `Количество очков у игрока: ${playerPoint}`;
           if (playerPoint === 10) {
             clearInterval(interval);
+            clearTimeout(timeout);
             endGame();
             return;
           }

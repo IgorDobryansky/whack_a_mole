@@ -21,5 +21,6 @@ export default class Cell {
     cellImg.src = this.childImgSrc;
     tableCell.append(cellImg);
     parentElement.append(tableCell);
+    return tableCell;
   }
 }
