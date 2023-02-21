@@ -4,7 +4,6 @@ export default class Cell {
   constructor() {
     this._tagName = "td";
     this._dataNumber;
-    this._childImgSrc = "@img/Roman.jpg";
   }
 
   get tagName() {
@@ -17,9 +16,6 @@ export default class Cell {
 
   createCell(parentElement) {
     const tableCell = createElement(this.tagName, "");
-    const cellImg = createElement("img", "");
-    cellImg.src = this.childImgSrc;
-    tableCell.append(cellImg);
     parentElement.append(tableCell);
     return tableCell;
   }

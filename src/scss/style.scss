@@ -2,7 +2,7 @@
 
 #app {
   position: relative;
-  .end-game-modal{
+  .end-game-modal {
     position: absolute;
     top: 50px;
     left: 50%;
@@ -16,21 +16,20 @@
     border: 1px solid black;
     padding: 20px 30px;
     text-align: center;
-    .again-button{
+    .again-button {
       margin-top: 10px;
       padding: 10px 15px;
       border: 1px solid white;
       border-radius: 5px;
-      &:hover{
+      &:hover {
         border: 1px solid black;
-        
       }
     }
   }
-    h1{
-        font-size: 30px;
-        margin-bottom: 10px;
-    }
+  h1 {
+    font-size: 30px;
+    margin-bottom: 10px;
+  }
   .statistic {
     margin-bottom: 10px;
     font-size: 20px;
@@ -38,7 +37,7 @@
   fieldset {
     border: 1px solid black;
     border-radius: 15px;
-    padding: 10px 20px ;
+    padding: 10px 20px;
     display: flex;
     align-items: center;
     margin-bottom: 10px;
@@ -74,14 +73,6 @@
         border-radius: 50%;
         border: 1px solid black;
         overflow: hidden;
-        img {
-          position: absolute;
-          width: 100%;
-          border-radius: 50%;
-          top: 100%;
-          left: 0;
-          transition: 100ms ease-in-out;
-        }
       }
     }
   }

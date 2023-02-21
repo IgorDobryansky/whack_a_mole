@@ -34,7 +34,6 @@ function startGame() {
     for (let j = 0; j < 10; j++) {
       const td = new Cell();
       td.createCell(tableRow);
-      // td.style.height = getComputedStyle(td).width + "px";
     }
     table.append(tableRow);
   }
@@ -70,12 +69,9 @@ function startGame() {
       if (+cell.getAttribute("data-number") === cellsNumber[randomCell]) {
         cell.addEventListener("click", playerGetPoint);
 
-        cell.firstChild.style.top = "0%";
-
-        // cell.style.background = "blue";
+        cell.style.background = "blue";
 
         timeout = setTimeout(() => {
-          cell.firstChild.style.top = "100%";
           cell.style.background = "red";
           cell.removeEventListener("click", playerGetPoint);
           computerPoint++;
@@ -91,7 +87,6 @@ function startGame() {
         }, difficultyMode);
 
         function playerGetPoint() {
-          cell.firstChild.style.top = "100%";
           cell.style.background = "green";
           playerPoint++;
           playerOutput.innerText = `Количество очков у игрока: ${playerPoint}`;
